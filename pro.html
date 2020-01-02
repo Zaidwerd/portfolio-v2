@@ -124,7 +124,7 @@
 			opacity: 0;
 			width: 100px;
 			margin-top: 2%;
-			
+			visibility: hidden	
 		}
 		.links .contact-btns a img{
 			/* height: 48px; */
@@ -224,11 +224,11 @@
 					if ($('.contact-btns').hasClass('active')) {
 						$('.contact-btns').removeClass('active');
 						tlContact
-						.staggerTo('.contact-btns a', 0.5, {opacity: 0, x:'0%', force3D: true}, 0.2);
+						.staggerTo('.contact-btns a', 0.5, {opacity: 0, visibility: 'hidden', x:'0%', force3D: true}, 0.2);
 					} else {
 						$('.contact-btns').addClass('active');
 						tlContact
-							.staggerTo('.contact-btns a', 0.5, {opacity: 1, x:'0%', force3D: true}, 0.2);
+							.staggerTo('.contact-btns a', 0.5, {opacity: 1, visibility: 'visible', x:'0%', force3D: true}, 0.2);
 					}
 			});
 		});
