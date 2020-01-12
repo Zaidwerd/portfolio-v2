@@ -1,239 +1,259 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Andrew Diaz</title>
-	<!-- <link rel="style-sheet" href="./css/style.css"> -->
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-	crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/jquery.gsap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-	<!-- <script src="./js/script.js"></script> -->
-	<style>
-		body {
-			background-color: #F5F5F5;
-			height: 100vh;
-			width: 100vw;
-			margin: 0 auto;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			overflow-y: hidden;
-			overflow-x: hidden;
-		}
-		
-		.wrapper.main {
-			height: 100%;
-			width: 100%;
-			margin: 0 auto;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			overflow-y: hidden;
-			overflow-x: hidden;
-		}
-		section {
-			width: 100%;
-			text-align: center;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			opacity: 0;
-		}
-		
-		.show {
-			display: flex;
-		}
-		
-		.hide {
-			display: none;
-		}
-	
-		/* Landing Section */
-		
-		.wrapper.one {
-			width: 100%;
-			height: 50%;
-		}
-		
-		.wrapper.one .rank {
-			position: relative;
-			display: block;
-			color: red;
-			font-size: 100px;
-			font-weight: 900;
-			letter-spacing: -22px;
-			font-family: helvetica;
-		}
+  <meta charset="utf-8">
+  <title>Andrew Diaz</title>
+  <!-- <link rel="style-sheet" href="./css/style.css"> -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/jquery.gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <!-- <script src="./js/script.js"></script> -->
+  <style>
+    body {
+      background-color: #F5F5F5;
+      height: 100vh;
+      width: 100vw;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
 
-		.wrapper.one .rank.inner {
-			background-image: url("milky-way-2695569_1920.jpg");
-			background-size: 100%;
-			background-position: 49% 45%;
-			background-color: blue;
-			background-repeat: no-repeat;
-			-webkit-text-fill-color: transparent;
-			-webkit-background-clip: text;
-			z-index: 2;
-			mix-blend-mode: difference;
-		}
+    .wrapper.main {
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+    section {
+      width: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+    }
 
-		.wrapper.one .rank.outter {
-			top: -208px;
-			left: -0.8%;
-			z-index: 1;
-		}
-		
-		#landing h2 {
-			position: absolute;
-			width: 100%;
-			top: 62%;
-			text-align: center;
-		}
-		
-		/* About Section */
-		
-		section#about {
-			flex-flow: column;
-		}
-		
-		.wrapper.two {
-			width: 50%;
-			height: 100%%;
-		}
-		
-		/* Navigation Buttons */
-		.links {
-			margin-bottom: 10%;
-		}
-		
-		.links .btn {
-			font-weight: bold;
-			height: 48px;
-			width: 100px;
-			background: url(milky-way-2695569_1920.jpg);
-			color: #fff;
-			border-radius: 25px;
-		}
-		
-		.links .contact-btns a {
-			opacity: 0;
-			width: 100px;
-			margin-top: 2%;
-			visibility: hidden	
-		}
-		.links .contact-btns a img{
-			/* height: 48px; */
-			width: 50px;
-			padding: 2% 25px;
-		}
-		
-	</style>
+    .show {
+      display: flex;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    /* Landing Section */
+
+    .wrapper.one {
+      width: 100%;
+      height: 50%;
+    }
+
+    .wrapper.one .rank {
+      position: relative;
+      display: block;
+      color: red;
+      font-size: 11rem;
+      font-weight: 900;
+      letter-spacing: -22px;
+      font-family: helvetica;
+    }
+
+    .wrapper.one .rank.inner {
+      background-image: url("milky-way-2695569_1920.jpg");
+      background-size: 100%;
+      background-position: 49% 45%;
+      background-color: blue;
+      background-repeat: no-repeat;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      z-index: 2;
+      mix-blend-mode: difference;
+    }
+
+    .wrapper.one .rank.outter {
+      top: -88%;
+      left: -0.8%;
+      z-index: 1;
+    }
+
+    #landing h2 {
+      position: absolute;
+      width: 100%;
+      top: 62%;
+      text-align: center;
+      font-size: 4.5rem;
+    }
+
+    /* About Section */
+
+    section#about {
+      flex-flow: column;
+    }
+
+    .wrapper.two {
+      width: 50%;
+      height: 100%%;
+    }
+
+    /* Navigation Buttons */
+    .links {
+      margin-bottom: 10%;
+    }
+
+    .links .btn {
+      font-weight: bold;
+      height: 48px;
+      width: 100px;
+      background: url(milky-way-2695569_1920.jpg);
+      color: #fff;
+      border-radius: 25px;
+    }
+
+    .links .contact-btns a {
+      opacity: 0;
+      width: 100%;
+      margin-top: 2%;
+      visibility: hidden
+    }
+    .links .contact-btns a img{
+      /* height: 48px; */
+      width: 50px;
+      padding: 2% 25px;
+    }
+
+    @media only screen and (max-device-width: 425px) {
+      .links {
+        margin-bottom: 20%;
+        width: 80%;
+      }
+
+      .links .btn {
+        height: 150px;
+        width: 100%;
+        font-size: 2.5rem;
+        margin-top: 2%;
+      }
+
+      .links .contact-btns a img{
+        width: 26%;
+      }
+
+    }
+
+  </style>
 </head>
 <body>
-	<div class="wrapper main">
-		<section id="landing" class="hide">
-			<div class="wrapper one">
-			  <h1 class="rank inner">
-				<span>A</span>
-				<span>N</span>
-				<span>D</span>
-				<span>R</span>
-				<span>E</span>
-				<span>W</span>
-			  </h1>
-			  <h1 class="rank outter">
-				<span>A</span>
-				<span>N</span>
-				<span>D</span>
-				<span>R</span>
-				<span>E</span>
-				<span>W</span>
-			  </h1>
-			</div>
-			<h2>- Developer -</h2>
-		</section>
-		<section id="about" class="hide">
-			<div class="wrapper two">
-				<h2 class="item">about</h2>
-				<p class="item">Hodor. Hodor hodor, hodor. Hodor hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor; hodor hodor hodor. Hodor. Hodor hodor; hodor hodor - hodor, hodor, hodor hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor; hodor hodor; hodor hodor hodor! Hodor hodor HODOR! Hodor hodor... Hodor hodor hodor...</p>
-				<p class="item">Hodor. Hodor hodor, hodor. Hodor hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor; hodor hodor hodor. Hodor. Hodor hodor; hodor hodor - hodor, hodor, hodor hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor; hodor hodor; hodor hodor hodor! Hodor hodor HODOR! Hodor hodor... Hodor hodor hodor...</p>
-				
-			<div>
-		</section>
-		<section id="projects"></section>
-	</div>
-	<div class="links">
-		<button class="home btn active">HOME</button>
-		<button class="about btn">ABOUT</button>
-		<button class="contact btn">CONTACT</button>
-		<div class="contact-btns">
-			<a href="https://github.com/Zaidwerd"><img id="github" src="./github-sign.png"/></a>
-			<a href="https://www.linkedin.com/in/andrewmdiaz"><img id="linkedin" src="./linkedin-logo.png"/></a>
-			<a href="mailto:andrew.matt.diaz@gmail.com" alt="Email"/>
-				<img id="email" src="./email.png" alt="">
-			</a>
-		</div>
-	</div>
-	
-	<script>
-		$(function(){
-			var tlHome = new TimelineLite();
-				tlAbout = new TimelineLite();
-				tlContact = new TimelineLite();
-				$home = $('#landing');
-				$about = $('#about');
-			
-			
-			$home.removeClass('hide');
-			$home.addClass('show');
-			tlHome
-				.to('#landing', 0.5, {opacity: 1, force3D: true})
-				.staggerFromTo('.rank', 1, {opacity: 0, y: '5%'}, {opacity: 1, y:'0%', force3D: true}, 0.5)
-				.fromTo('#landing h2', 1, {opacity: 0, y: '2%'}, {opacity: 1, y:'0%', force3D: true});
-			
-			
-			//Button Animation
-			
-			$('.links .home').click(function() {
-				$about.addClass('hide');
-				$home.removeClass('hide');
-				$home.addClass('show');
-				tlHome
-				.to('#about', 0.5, {opacity: 1, force3D: true})
-				.to('#landing', 0.5, {opacity: 1, force3D: true})
-				.staggerFromTo('.rank', 1, {opacity: 0, y: '5%'}, {opacity: 1, y:'0%', force3D: true}, 0.5)
-				.fromTo('#landing h2', 0.5, {opacity: 0, y: '2%'}, {opacity: 1, y:'0%', force3D: true});
-			});
-			
-			$('.links .about').click(function() {
-				$home.addClass('hide');
-				$about.removeClass('hide');
-				$about.addClass('show');
-				tlAbout
-				.to('#about', 0.5, {opacity: 1, force3D: true})
-				.staggerFromTo('#about .item', 1, {opacity: 0, y: '2%'}, {opacity: 1, y:'0%', force3D: true}, 0.5);
-			});
-			
-			$('.links .contact').click(function() {
-				console.log('clicked');
-					if ($('.contact-btns').hasClass('active')) {
-						$('.contact-btns').removeClass('active');
-						tlContact
-						.staggerTo('.contact-btns a', 0.5, {opacity: 0, visibility: 'hidden', x:'0%', force3D: true}, 0.2);
-					} else {
-						$('.contact-btns').addClass('active');
-						tlContact
-							.staggerTo('.contact-btns a', 0.5, {opacity: 1, visibility: 'visible', x:'0%', force3D: true}, 0.2);
-					}
-			});
-		});
-		
-		
-	</script>
+  <div class="wrapper main">
+    <section id="landing" class="hide">
+      <div class="wrapper one">
+        <h1 class="rank inner">
+        <span>A</span>
+        <span>N</span>
+        <span>D</span>
+        <span>R</span>
+        <span>E</span>
+        <span>W</span>
+        </h1>
+        <h1 class="rank outter">
+        <span>A</span>
+        <span>N</span>
+        <span>D</span>
+        <span>R</span>
+        <span>E</span>
+        <span>W</span>
+        </h1>
+      </div>
+      <h2>- Developer -</h2>
+    </section>
+    <section id="about" class="hide">
+      <div class="wrapper two">
+        <h2 class="item">about</h2>
+        <p class="item">Hodor. Hodor hodor, hodor. Hodor hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor; hodor hodor hodor. Hodor. Hodor hodor; hodor hodor - hodor, hodor, hodor hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor; hodor hodor; hodor hodor hodor! Hodor hodor HODOR! Hodor hodor... Hodor hodor hodor...</p>
+        <p class="item">Hodor. Hodor hodor, hodor. Hodor hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor; hodor hodor hodor. Hodor. Hodor hodor; hodor hodor - hodor, hodor, hodor hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor; hodor hodor; hodor hodor hodor! Hodor hodor HODOR! Hodor hodor... Hodor hodor hodor...</p>
+
+      <div>
+    </section>
+    <section id="projects"></section>
+  </div>
+  <div class="links">
+    <button class="home btn active">HOME</button>
+    <button class="about btn">ABOUT</button>
+    <button class="contact btn">CONTACT</button>
+    <div class="contact-btns">
+      <a href="https://github.com/Zaidwerd"><img id="github" src="./github-sign.png"/></a>
+      <a href="https://www.linkedin.com/in/andrewmdiaz"><img id="linkedin" src="./linkedin-logo.png"/></a>
+      <a href="mailto:andrew.matt.diaz@gmail.com" alt="Email"/>
+        <img id="email" src="./email.png" alt="">
+      </a>
+    </div>
+  </div>
+
+  <script>
+    $(function(){
+      var tlHome = new TimelineLite();
+        tlAbout = new TimelineLite();
+        tlContact = new TimelineLite();
+        $home = $('#landing');
+        $about = $('#about');
+
+
+      $home.removeClass('hide');
+      $home.addClass('show');
+      tlHome
+        .to('#landing', 0.5, {opacity: 1, force3D: true})
+        .staggerFromTo('.rank', 1, {opacity: 0, y: '5%'}, {opacity: 1, y:'0%', force3D: true}, 0.5)
+        .fromTo('#landing h2', 1, {opacity: 0, y: '2%'}, {opacity: 1, y:'0%', force3D: true});
+
+
+      //Button Animation
+
+      $('.links .home').click(function() {
+        $about.addClass('hide');
+        $home.removeClass('hide');
+        $home.addClass('show');
+        tlHome
+        .to('#about', 0.5, {opacity: 1, force3D: true})
+        .to('#landing', 0.5, {opacity: 1, force3D: true})
+        .staggerFromTo('.rank', 1, {opacity: 0, y: '5%'}, {opacity: 1, y:'0%', force3D: true}, 0.5)
+        .fromTo('#landing h2', 0.5, {opacity: 0, y: '2%'}, {opacity: 1, y:'0%', force3D: true});
+      });
+
+      $('.links .about').click(function() {
+        $home.addClass('hide');
+        $about.removeClass('hide');
+        $about.addClass('show');
+        tlAbout
+        .to('#about', 0.5, {opacity: 1, force3D: true})
+        .staggerFromTo('#about .item', 1, {opacity: 0, y: '2%'}, {opacity: 1, y:'0%', force3D: true}, 0.5);
+      });
+
+      $('.links .contact').click(function() {
+        console.log('clicked');
+          if ($('.contact-btns').hasClass('active')) {
+            $('.contact-btns').removeClass('active');
+            tlContact
+            .staggerTo('.contact-btns a', 0.5, {opacity: 0, visibility: 'hidden', x:'0%', force3D: true}, 0.2);
+          } else {
+            $('.contact-btns').addClass('active');
+            tlContact
+              .staggerTo('.contact-btns a', 0.5, {opacity: 1, visibility: 'visible', x:'0%', force3D: true}, 0.2);
+          }
+      });
+    });
+
+
+  </script>
 </body>
 </html>
